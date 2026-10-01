@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+
+const {
+  title = 'Tina Dahl — Photography & Film'
+} = Astro.props;
+---
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+
+    <meta
+      name="description"
+      content="Hospitality photography and film by Tina Dahl."
+    />
+
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <slot />
+
+      <section class="site-cta">
+        <p>For commissions and collaborations</p>
+        <a href="mailto:post@tinadahl.no">
+          Get in touch →
+        </a>
+    </section>
+
+  <footer class="footer">
+    <span>© 2026 Tina Dahl</span>
+
+    <div class="footer-links">
+      <a
+        href="https://instagram.com/tinamariedahl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+      •
+      <a href="mailto:post@tinadahl.no">
+        Email
+      </a>
+    </div>
+  </footer>
+
+  </body>
+</html>

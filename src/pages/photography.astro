@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import { photos } from '../data/photos.js';
+---
+
+<Base title="Photography — Tina Dahl">
+  <main class="page">
+
+    <h1 class="page-title">Photography</h1>
+
+    <p class="lede">
+      A selection of places, details, light and atmosphere.
+    </p>
+
+    <section class="photography-grid">
+      {photos.map((photo, i) => (
+        <figure class={photo.orientation}>
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            loading={i > 5 ? 'lazy' : 'eager'}
+          />
+        </figure>
+      ))}
+    </section>
+
+  </main>
+</Base>

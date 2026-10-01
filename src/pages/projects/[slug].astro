@@ -1,0 +1,119 @@
+---
+import Base from '../../layouts/Base.astro';
+import { projects } from '../../data/projects.js';
+
+export function getStaticPaths() {
+  return projects
+    .filter((project) => project.live)
+    .map((project) => ({
+      params: {
+        slug: project.slug
+      },
+      props: {
+        project
+      }
+    }));
+}
+
+const { project } = Astro.props;
+
+const liveProjects = projects.filter((item) => item.live);
+const currentIndex = liveProjects.findIndex(
+  (item) => item.slug === project.slug
+);
+
+const previousProject =
+  liveProjects[(currentIndex - 1 + liveProjects.length) % liveProjects.length];
+
+const nextProject =
+  liveProjects[(currentIndex + 1) % liveProjects.length];
+---
+
+<Base>
+  <main class="page">
+
+    <!-- PROJECT TITLE -->
+
+    <header class="project-top">
+      <div>
+        <h1>{project.title}</h1>
+
+        <p class="project-kicker">
+          {project.location}
+        </p>
+      </div>
+    </header>
+
+
+    <!-- FILMS + PROJECT INFO -->
+
+    <section class="project-intro">
+
+      <div class="films">
+        {project.videos?.map((video) => (
+          <div class="film">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source
+                src={video}
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        ))}
+      </div>
+
+      <div class="project-description">
+        <p>{project.description}</p>
+
+        <div class="project-services">
+          <span>Photography & Film</span>
+          <span>{project.year}</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PHOTOGRAPHY -->
+
+    {project.gallery?.length > 0 && (
+      <section class="project-gallery">
+        {project.gallery.map((image) => (
+          <figure class={image.layout || 'third'}>
+            <img
+              src={image.src}
+              alt=""
+              loading="lazy"
+            />
+          </figure>
+        ))}
+      </section>
+    )}
+
+    <nav class="project-navigation">
+      <a href={`/projects/${previousProject.slug}`}>
+        <span>←</span>
+        <div>
+          <small>Previous project</small>
+          <strong>{previousProject.title}</strong>
+        </div>
+      </a>
+
+      <a
+        href={`/projects/${nextProject.slug}`}
+        class="next-project"
+      >
+        <div>
+          <small>Next project</small>
+          <strong>{nextProject.title}</strong>
+        </div>
+        <span>→</span>
+      </a>
+    </nav>
+
+  </main>
+</Base>

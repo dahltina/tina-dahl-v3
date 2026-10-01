@@ -1,0 +1,54 @@
+---
+import { projects } from '../data/projects.js';
+
+const { limit } = Astro.props;
+
+const items = limit
+  ? projects.slice(0, limit)
+  : projects;
+---
+
+<div class="project-grid">
+  {items.map((project) => (
+    <a
+      href={project.live ? `/projects/${project.slug}` : '/projects'}
+      class:list={[
+        'project-card',
+        !project.live && 'soon'
+      ]}
+    >
+
+    <div class="media">
+      {project.videos?.[0] ? (
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster={project.cover}
+        >
+          <source
+            src={project.videos[0]}
+            type="video/mp4"
+          />
+        </video>
+      ) : (
+        <img
+          src={project.cover}
+          alt=""
+          loading="lazy"
+        />
+      )}
+    </div>
+
+      <div class="project-meta">
+        <h3>{project.title}</h3>
+
+        <p>
+          {project.location}
+        </p>
+      </div>
+    </a>
+  ))}
+</div>

@@ -1,0 +1,44 @@
+<header class="header">
+  <a class="brand" href="/">
+    TINA DAHL
+  </a>
+
+  <nav class="nav">
+    <a href="/projects">Projects</a>
+    <a href="/photography">Photography</a>
+    <a href="/about">About</a>
+    <a href="mailto:post@tinadahl.no">Contact</a>
+  </nav>
+
+  <button
+    class="menu-btn"
+    aria-label="Open menu"
+    data-menu
+  >
+    ☰
+  </button>
+</header>
+
+<div
+  class="mobile-menu"
+  data-mobile-menu
+>
+  <a href="/">Home</a>
+  <a href="/projects">Projects</a>
+  <a href="/photography">Photography</a>
+  <a href="/about">About</a>
+  <a href="mailto:hello@example.com">Contact</a>
+</div>
+
+<script>
+  const button = document.querySelector('[data-menu]');
+  const menu = document.querySelector('[data-mobile-menu]');
+
+  button?.addEventListener('click', () => {
+    menu?.classList.toggle('open');
+
+    button.textContent = menu?.classList.contains('open')
+      ? '×'
+      : '☰';
+  });
+</script>

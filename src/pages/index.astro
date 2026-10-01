@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { photos } from '../data/photos.js';
+
+const featuredPhotos = photos
+  .filter((photo) => photo.featured)
+  .slice(0, 12);
+---
+
+<Base>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-fallback"></div>
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source
+        src="/videos/hero-website-horizontal.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <div class="hero-copy">
+      <h1>Tina Dahl</h1>
+      <p>Visual storytelling for the places worth staying</p>
+    </div>
+  </section>
+
+  <!-- SELECTED PROJECTS -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Selected Projects</h2>
+      <a
+        class="tiny"
+        href="/projects"
+      >
+        View all →
+      </a>
+    </div>
+    <ProjectGrid limit={4} />
+  </section>
+
+  <!-- SELECTED PHOTOGRAPHY -->
+  <section class="section photography-section">
+    <div class="section-head">
+      <h2>Selected Photography</h2>
+
+      <a
+        class="tiny"
+        href="/photography"
+      >
+        View all →
+      </a>
+    </div>
+
+    <div class="photo-strip">
+      {featuredPhotos.map((photo) => (
+        <figure>
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            loading="lazy"
+          />
+        </figure>
+      ))}
+    </div>
+  </section>
+
+</Base>

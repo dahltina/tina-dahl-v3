@@ -53,10 +53,12 @@ const nextProject =
         {project.videos?.map((video) => (
           <div class="film">
             <video
+              class="autoplay-video"
               autoplay
               muted
               loop
               playsinline
+              preload="auto"
             >
               <source
                 src={video}

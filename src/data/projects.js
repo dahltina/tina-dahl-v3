@@ -5,7 +5,7 @@ export const projects = [
     location: 'Bali, Indonesia',
     year: '2026',
     description: 'Studio Forma is a private villa in Bali defined by clean architectural lines, warm materials and shifting natural light.',
-    cover: '/images/studio-forma-01.jpg',
+    cover: '/images/photography/studio-forma-01.jpg',
     videos: [
       '/videos/projects/studio-forma-reel-2.MP4',
       '/videos/projects/studio-forma-reel1.mp4'
@@ -53,7 +53,7 @@ export const projects = [
     location: 'Bali, Indonesia',
     year: '2026',
     description: 'Villa Maia is a private villa in Uluwatu, Bali, combining clean contemporary architecture with warm natural materials and tropical surroundings.',
-    cover: '/images/maia-01.jpg',
+    cover: '/images/photography/maia-01.jpg',
     videos: [
       '/videos/projects/villamaia-reel2.mp4',
       '/videos/projects/villamaia-reel1.mp4'
@@ -101,7 +101,7 @@ export const projects = [
     location: 'Bangkok, Thailand',
     year: '2026',
     description: 'The Fig Lobby is a design-led hotel in Bangkok, Thailand, known for its eclectic interiors, bold colour and playful mix of art and design.',
-    cover: '/images/maia-03.jpg',
+    cover: '/images/photography/maia-02.jpg',
     videos: [
       '/videos/projects/studio-forma-reel1.mp4'
     ],
@@ -124,7 +124,7 @@ export const projects = [
     location: 'Bali, Indonesia',
     year: '2026',
     description: 'Suom is a collection of contemporary villas and apartments in Canggu, Bali, defined by warm minimalism, natural textures and considered details.',
-    cover: '/images/suom-01.jpg',
+    cover: '/images/photography/suom-01.jpg',
     videos: [
       '/videos/projects/suom-reel1.mp4'
     ],

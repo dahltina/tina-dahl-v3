@@ -21,11 +21,12 @@ const items = limit
     <div class="media">
       {project.videos?.[0] ? (
         <video
+          class="autoplay-video"
           autoplay
           muted
           loop
           playsinline
-          preload="metadata"
+          preload="auto"
           poster={project.cover}
         >
           <source

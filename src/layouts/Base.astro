@@ -56,5 +56,24 @@ const {
     </div>
   </footer>
 
+  <script>
+    const videos = document.querySelectorAll<HTMLVideoElement>('.autoplay-video');
+
+    videos.forEach((video) => {
+      video.muted = true;
+      video.defaultMuted = true;
+
+      const playVideo = () => {
+        video.play().catch(() => {});
+      };
+
+      if (video.readyState >= 2) {
+        playVideo();
+      } else {
+        video.addEventListener('canplay', playVideo, { once: true });
+      }
+    });
+  </script>
+
   </body>
 </html>

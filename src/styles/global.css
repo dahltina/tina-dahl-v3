@@ -125,13 +125,6 @@ button {
   inset: 0;
 }
 
-.hero-fallback {
-  background:
-    url('/images/maia-01.jpg')
-    center / cover
-    no-repeat;
-}
-
 .hero::after {
   content: '';
 

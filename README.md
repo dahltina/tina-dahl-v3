@@ -26,12 +26,31 @@ Project and photography content is managed through local files.
 Install dependencies:
 
 ```bash
+
 npm install
 
-## Run locally
-1. Install Node 20+
-2. `npm install`
-3. `npm run dev`
+```
 
-## Production Build
-`npm run build`
+Start the local development server:
+
+```bash
+
+npm run dev
+
+```
+
+Create a production build:
+
+```bash
+
+npm run build
+
+```
+
+## Deployment
+
+The site is deployed via Netlify with continuous deployment from the `main` branch.
+
+## Design & Development
+
+Designed and developed by Tina Dahl.

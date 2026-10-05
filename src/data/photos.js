@@ -137,9 +137,41 @@ export const photos = [
   },
   {
     src: '/images/photography/home-01.jpg',
-    alt: 'Window',
+    alt: 'Window in hallway',
     project: 'Home',
     location: 'Lier, Norway',
+    featured: true,
+    orientation: 'portrait'
+  },
+  {
+    src: '/images/photography/the-fig-lobby-1.jpg',
+    alt: 'The Fig Lobby Hotel Room',
+    project: 'The Fig Lobby',
+    location: 'Bangkok, Thailand',
+    featured: true,
+    orientation: 'portrait'
+  },
+  {
+    src: '/images/photography/the-fig-lobby-5.jpg',
+    alt: 'The Fig Lobby Hotel Room',
+    project: 'The Fig Lobby',
+    location: 'Bangkok, Thailand',
+    featured: true,
+    orientation: 'portrait'
+  },
+    {
+    src: '/images/photography/the-fig-lobby-6.jpg',
+    alt: 'The Fig Lobby Hotel Room',
+    project: 'The Fig Lobby',
+    location: 'Bangkok, Thailand',
+    featured: true,
+    orientation: 'portrait'
+  },
+    {
+    src: '/images/photography/the-fig-lobby-10.jpg',
+    alt: 'The Fig Lobby Hotel Room',
+    project: 'The Fig Lobby',
+    location: 'Bangkok, Thailand',
     featured: true,
     orientation: 'portrait'
   }

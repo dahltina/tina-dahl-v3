@@ -101,18 +101,43 @@ export const projects = [
     location: 'Bangkok, Thailand',
     year: '2026',
     description: 'The Fig Lobby is a design-led hotel in Bangkok, Thailand, known for its eclectic interiors, bold colour and playful mix of art and design.',
-    cover: '/images/photography/maia-02.jpg',
+    cover: '/images/photography/the-fig-lobby-5.jpg',
     videos: [
-      '/videos/projects/studio-forma-reel1.mp4'
+      '/videos/projects/tfl-reel-1.mp4',
+      '/videos/projects/tfl-reel-2.mp4'
     ],
-    live: false,
+    live: true,
     gallery: [
       {
-        src: '/images/photography/maia-01.jpg',
+        src: '/images/photography/the-fig-lobby-1.jpg',
         layout: 'third'
       },
       {
-        src: '/images/photography/maia-02.jpg',
+        src: '/images/photography/the-fig-lobby-5.jpg',
+        layout: 'third'
+      },
+      {
+        src: '/images/photography/the-fig-lobby-6.jpg',
+        layout: 'third'
+      },
+      {
+        src: '/images/photography/the-fig-lobby-8.jpg',
+        layout: 'third'
+      },
+      {
+        src: '/images/photography/the-fig-lobby-9.jpg',
+        layout: 'third'
+      },
+      {
+        src: '/images/photography/the-fig-lobby-10.jpg',
+        layout: 'third'
+      },
+      {
+        src: '/images/photography/the-fig-lobby-13.jpg',
+        layout: 'third'
+      },
+      {
+        src: '/images/photography/the-fig-lobby-17.jpg',
         layout: 'third'
       }
     ]
